@@ -8,7 +8,7 @@ Subsequently, we will analyze the dimensions of all images and the frequency of 
 # Detect using open-source Tesseract OCR and Easy OCR.
 Initially, we evaluated the detection accuracy using the open-source libraries Tesseract OCR and EasyOCR. The accuracy on the overall dataset was 30% for Tesseract OCR and 38% for EasyOCR. To improve accuracy, we then employed PIL for image pre-processing before applying the detection functions. However, the accuracy remained at 23% for Tesseract OCR and 54% for EasyOCR after this pre-processing step. 
 
-# Detect using image segmentation and linear regression 
+# Detect using image segmentation and logistic regression 
 To enhance accuracy, we split the dataset into training and testing sets. Subsequently, we segmented characters from the input images and associated them with corresponding labels. For each segmented image, we extracted feature vectors using CLIP image embeddings. Training a classifier with these features and labels proved difficult due to convergence issues, likely stemming from improper feature selection. We then switched to using the mean RGB value for each pixel as features, which resulted in smooth classifier convergence. However, the test accuracy remained low.
 
 # Detect using imgae segmentation and image differences. 
